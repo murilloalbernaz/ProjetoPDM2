@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoFinalPDM2</string>
+    <string name="app_name">AulaoIFTO</string>
     <string name="titulo">Bem vindos a plataforma de estudos</string>
     <string name="textoBotaoProfessor">Professor</string>
     <string name="textoBotaoAluno">Aluno</string>
@@ -47,5 +47,10 @@
     <string name="dias_semana">Dias da semana</string>
     <string name="nome_professor">Nome do Professor</string>
     <string name="titulo_alunos_cadastrados">Alunos Cadastrados</string>
-    <string name="botaoCadastrarAula">Cadastrar Aula</string>
+    <string name="botaoCadastrarAula">Cadastrar na Aula</string>
+    <array name="apps">
+        <item>Wathsap</item>
+        <item>GMAIL</item>
+        <item>Mensagem</item>
+    </array>
 </resources>

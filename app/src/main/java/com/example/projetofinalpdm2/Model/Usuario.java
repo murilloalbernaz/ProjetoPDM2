@@ -1,5 +1,7 @@
 package com.example.projetofinalpdm2.Model;
 
+import androidx.annotation.Nullable;
+
 import java.io.Serializable;
 
 public class Usuario implements Serializable {
@@ -18,6 +20,19 @@ public class Usuario implements Serializable {
         this.senha = senha;
         this.profissao = profissao;
         this.instituicao = instituicao;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        try {
+            Usuario u =(Usuario) obj;
+            if (u.getEmail().equals(this.email))
+                return true;
+            else
+                return false;
+        }catch (Exception e){
+            return super.equals(obj);
+        }
     }
 
     public String getNome() {
