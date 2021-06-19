@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Acoes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/botaoLocalizacaoFuncoes"
+            android:layout_width="260sp"
+            android:layout_height="wrap_content"
+            android:text="@string/botaoLocalizacao"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"
+            android:layout_marginTop="40sp"/>
+
+        <Button
+            android:id="@+id/botaoCadastrarAulaFuncoes"
+            android:layout_width="260sp"
+            android:layout_height="wrap_content"
+            android:text="@string/botaoCadastrarAula"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"/>
+
+        <Button
+            android:id="@+id/botaoVoltarFuncoes"
+            android:layout_width="260sp"
+            android:layout_height="wrap_content"
+            android:text="@string/botaoVoltar"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"/>
+    </LinearLayout>
+
+</FrameLayout>

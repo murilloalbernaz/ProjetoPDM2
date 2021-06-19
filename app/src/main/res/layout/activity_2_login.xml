@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    android:layout_gravity="center_horizontal"
+     tools:context=".Activity2Login" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tituloLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40sp"
+            android:text="@string/titulo_login"
+            android:gravity="center"
+            android:textSize="38sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/campoEmailLogin"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/campo_email"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no"/>
+
+        <EditText
+            android:id="@+id/campoSenhaLogin"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/campo_senha"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="textPassword"
+            android:importantForAutofill="no"/>
+
+        <Button
+            android:id="@+id/botaoEntrar"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="@string/botaoEntrar"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"
+            android:layout_marginTop="40sp"
+            android:onClick="logar"/>
+        <Button
+            android:id="@+id/botaoCadastrar"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"
+            android:onClick="cadastrar"
+            />
+    </LinearLayout>
+</RelativeLayout>

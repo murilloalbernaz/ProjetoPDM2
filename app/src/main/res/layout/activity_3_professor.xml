@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10sp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".Activity3Professor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tituloCadastroAula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40sp"
+            android:text="@string/titulo_cadastro_aula"
+            android:gravity="center"
+            android:textSize="38sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/segunda_feira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/segundas"/>
+                <CheckBox
+                    android:id="@+id/terca_feira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/tercas"/>
+                <CheckBox
+                    android:id="@+id/quarta_feira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/quartas"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/quinta_feira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/quintas"/>
+                <CheckBox
+                    android:id="@+id/sexta_feira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/sextas"/>
+                <CheckBox
+                    android:id="@+id/sabado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/sabados"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/domingo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26sp"
+                    android:text="@string/domingos"/>
+            </TableRow>
+        </TableLayout>
+
+        <TimePicker
+            android:id="@+id/spinnerHora"
+            android:layout_width="250sp"
+            android:layout_height="90sp"
+            android:layout_gravity="center"
+            android:timePickerMode="spinner"/>
+
+        <Spinner
+            android:id="@+id/campoDisciplina"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/disciplina_aula"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/black"
+            android:inputType="text"
+            android:importantForAutofill="no"/>
+
+        <Button
+            android:id="@+id/botaoMarcarLocal"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="@string/botaoMarcarLocal"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="32sp"
+            android:backgroundTint="#57aeff"
+            android:onClick="abrirmaps"/>
+
+        <Button
+            android:id="@+id/botaoCadastrar"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="@string/textoBotaoCadastrarAula"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:backgroundTint="#57aeff"
+            android:layout_marginTop="40sp"
+            android:onClick="cadastrar"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/botaoConfigs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/icone_settings"
+            android:contentDescription="@string/botaoConfiguracoes"
+            android:layout_marginTop="40sp"
+            android:backgroundTint="#57aeff"
+            app:fabCustomSize="80sp"
+            app:maxImageSize="60sp"
+            app:tint="@color/white"
+            android:onClick="abrirCadastroDisciplina"/>
+    </LinearLayout>
+</RelativeLayout>

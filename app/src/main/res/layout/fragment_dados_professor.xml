@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DadosProfessor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/nomeProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_professor"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/emailProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campo_email"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/istituicaoProfesspr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campo_instituicao"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/diasSemanaDisciplina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campo_profissao"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</FrameLayout>
