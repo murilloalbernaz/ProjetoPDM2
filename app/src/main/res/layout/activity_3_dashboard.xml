@@ -8,7 +8,9 @@
     android:layout_margin="10sp"
     android:layout_gravity="center_horizontal"
     tools:context=".Activity3Dashboard">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -48,13 +50,21 @@
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
             android:textColor="@color/black"/>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:gravity="center">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaDisciplinasDisponiveis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
-
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/botaoAdicionar"
             android:layout_width="wrap_content"
@@ -67,6 +77,24 @@
             app:fabCustomSize="80sp"
             app:maxImageSize="60sp"
             app:tint="@color/white"
-            android:onClick="cadastrarAula"/>
+            android:onClick="cadastrarAula"
+            android:layout_marginBottom="30px"
+            android:layout_marginRight="40sp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/botaoExta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_icons8_pesquisar"
+            android:contentDescription="@string/botaoMinhaAula"
+            android:layout_marginTop="40sp"
+            android:backgroundTint="#57aeff"
+            app:fabCustomSize="80sp"
+            app:maxImageSize="60sp"
+            app:tint="@color/white"
+            android:onClick="visualizarMinhasAulas"
+            android:layout_marginBottom="30px"/>
+        </LinearLayout>
     </LinearLayout>
+</ScrollView>
 </RelativeLayout>

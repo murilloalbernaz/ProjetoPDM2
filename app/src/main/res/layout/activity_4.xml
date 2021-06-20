@@ -6,8 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10sp"
     android:layout_gravity="center_horizontal"
-    tools:context=".Activity4">
-
+    tools:context=".Activity4"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -83,12 +86,16 @@
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
             android:textColor="@color/black"/>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240sp"
+            android:gravity="center">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaSuasDisciplinas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/botaoVoltar"
@@ -101,4 +108,5 @@
             android:layout_marginTop="40sp"
             android:onClick="voltar"/>
     </LinearLayout>
+</ScrollView>
 </RelativeLayout>

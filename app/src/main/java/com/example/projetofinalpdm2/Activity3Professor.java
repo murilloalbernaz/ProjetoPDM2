@@ -102,7 +102,7 @@ public class Activity3Professor extends Activity {
 
     public void cadastrar(View view){
         atualizarAulaSingleton();
-        String id = aula.getDisciplina().getNome()+aula.getDisciplina().getNivel().toString() + aula.getProfessor().getNome()+aula.getHora()+aula.getMinuto();
+        String id = Aula.idAula(aula);
         mDatabase.child("Aulas").child(id).setValue(aula);
     }
 

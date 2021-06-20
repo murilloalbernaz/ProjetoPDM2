@@ -8,6 +8,7 @@ public class Singleton {
     private Usuario usuarioLogado;
     private Aula aula;
     private String ocupacaoUsuarioLogado;
+    private boolean alarmCriado = false;
 
     private Singleton(){
 
@@ -18,6 +19,14 @@ public class Singleton {
             singleton = new Singleton();
 
         return singleton;
+    }
+
+    public boolean isAlarmCriado() {
+        return alarmCriado;
+    }
+
+    public void setAlarmCriado(boolean alarmCriado) {
+        this.alarmCriado = alarmCriado;
     }
 
     public Usuario getUsuarioLogado() {

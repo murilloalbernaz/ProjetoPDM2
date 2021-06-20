@@ -38,6 +38,14 @@
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:backgroundTint="#57aeff"/>
+        <Button
+            android:id="@+id/botaoAtivarDesativar"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="ola"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            />
     </LinearLayout>
 
 </FrameLayout>

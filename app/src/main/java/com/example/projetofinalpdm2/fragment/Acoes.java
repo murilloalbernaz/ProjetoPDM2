@@ -3,6 +3,7 @@ package com.example.projetofinalpdm2.fragment;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -80,10 +81,12 @@ public class Acoes extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_acoes, container, false);
         mDatabaseAula = FirebaseDatabase.getInstance().getReference().child("Aulas");
-        Button localizacao, cadastrarAluno, voltar;
+        Button localizacao, cadastrarAluno, voltar, ativaDesativa;
         localizacao = view.findViewById(R.id.botaoLocalizacaoFuncoes);
         cadastrarAluno = view.findViewById(R.id.botaoCadastrarAulaFuncoes);
         voltar = view.findViewById(R.id.botaoVoltarFuncoes);
+        ativaDesativa = view.findViewById(R.id.botaoAtivarDesativar);
+        ativaDesativa.setVisibility(View.GONE);
         localizacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,9 +116,40 @@ public class Acoes extends Fragment {
                     enviar();
                 }
             });
+            controlaAtivaDesativa(ativaDesativa);
         }else if (singleton.getOcupacaoUsuarioLogado().equals("Professor"))
             cadastrarAluno.setVisibility(View.GONE);
+
         return view;
+    }
+
+    private void controlaAtivaDesativa(Button ativaDesativa) {
+        if (singleton.getOcupacaoUsuarioLogado().equals("Professor") && aula.getProfessor().getEmail().equals(singleton.getUsuarioLogado().getEmail())){
+            ativaDesativa.setVisibility(View.VISIBLE);
+            if (aula.isDisponivel()){
+                ativaDesativa.setText("Desativar Aula");
+                ativaDesativa.setBackgroundResource(R.color.teste);
+                ativaDesativa.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        aula.setDisponivel(false);
+                        mDatabaseAula.child(Aula.idAula(aula)).setValue(aula);
+                        getActivity().onBackPressed();
+                    }
+                });
+            }else {
+                ativaDesativa.setBackgroundResource(R.color.teste2);
+                ativaDesativa.setText("Ativar Aula");
+                ativaDesativa.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        aula.setDisponivel(true);
+                        mDatabaseAula.child(Aula.idAula(aula)).setValue(aula);
+                        getActivity().onBackPressed();
+                    }
+                });
+            }
+        }
     }
 
     private String stringDiasSemana(){
@@ -173,7 +207,7 @@ public class Acoes extends Fragment {
         }
         if (validador == false){
         aula.getAlunos().add(singleton.getUsuarioLogado());
-        String id = aula.getDisciplina().getNome()+aula.getDisciplina().getNivel().toString() + aula.getProfessor().getNome()+aula.getHora()+aula.getMinuto();
+        String id = Aula.idAula(aula);
         mDatabaseAula.child(id).setValue(aula);
         }
         getActivity().onBackPressed();

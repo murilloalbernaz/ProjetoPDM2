@@ -88,6 +88,10 @@ public class Aula implements Serializable {
         return disponivel;
     }
 
+    public final static String idAula(Aula aula){
+        return aula.getDisciplina().getNome()+aula.getDisciplina().getNivel().toString() + aula.getProfessor().getNome()+aula.getHora()+aula.getMinuto();
+    };
+
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
